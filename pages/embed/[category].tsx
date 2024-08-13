@@ -3,6 +3,20 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import styles from '../../styles/Embed.module.css';
 
+// Declare the global UnbiasedAIEmbed type
+declare global {
+  interface Window {
+    UnbiasedAIEmbed?: {
+      init: (containerId: string, category: string, options: {
+        width: string;
+        height: string;
+        theme: string;
+        showPagination: boolean;
+      }) => void;
+    };
+  }
+}
+
 export default function EmbedPage() {
   const router = useRouter();
   const { category } = router.query;
