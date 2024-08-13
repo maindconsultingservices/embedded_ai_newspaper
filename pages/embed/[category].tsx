@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import styles from '../../styles/Embed.module.css';
 
-// Declare the global UnbiasedAIEmbed type
 declare global {
   interface Window {
     UnbiasedAIEmbed?: {
